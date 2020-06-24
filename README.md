@@ -1,6 +1,6 @@
 # Basic Python Flask Url Shorten Service
 
-This little project was a challenge to be completed in under one hour. Hence there maybe a few flaws here and there. See the Security and Validation Notice.
+This little project was a challenge to be completed in under one hour. Hence there may be a few flaws here and there. See the Security and Validation Notice.
 
 ## Service
 For every long URL (and the `time.time()` value) a SHA-256 hash is generated.
