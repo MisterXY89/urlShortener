@@ -39,7 +39,6 @@ def create_connection():
         conn = sqlite3.connect(DB_FILE)
     except Exception as e:
         print(e)
-
     return conn
 
 
@@ -82,16 +81,13 @@ def result():
         return render_template("result.html", shortUrl = shortUrl, longUrl = longUrl)
     return redirect(url_for("index"))
 
+
 @app.route("/a/shorten", methods=["POST"])
 def shorten():
     url = request.form["longUrl"]
     urlHash = sha256((url+str(time.time())).encode('utf-8')).hexdigest()
     interval = randomInterval()
     shortUrlHash = urlHash[interval["start"]:interval["end"]]
-
-    print(url)
-    print(interval)
-    print(urlHash)
 
     # TODO: escape url!!
     shortUrl = BASE_URL + "/" + shortUrlHash
@@ -105,9 +101,6 @@ def shorten():
     res = updateUrlDb(urlDict)
     print(res)
     return redirect(url_for("result", shortUrl = shortUrl, longUrl = url))
-    return urlDict
-
-
 
 
 @app.route("/")
