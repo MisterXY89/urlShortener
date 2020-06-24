@@ -1,0 +1,20 @@
+
+footer {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center !important;
+  margin: auto !important;
+}
+
+
+#longUrl {
+  width: 100%;
+}
+
+
+.shortUrl {
+  font-size: 1.3em;
+  font-family: monospace;
+}

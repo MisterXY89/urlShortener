@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block header %}
+<div class="jumbo _white">
+  <h1>Here you go :D</h1>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    May we present to you, your short url <br />
+    <span class="text-center shortUrl">
+      {{ shortUrl }}
+    </span> <br />
+    for your long url ({{ longUrl }})
+  </div>
+</div>
+
+{% endblock %}

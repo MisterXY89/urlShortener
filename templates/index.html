@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block header %}
+<div class="jumbo _white">
+  <h1>Super cool url shortener!</h1>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <form action="/a/shorten" method="POST">
+        <div class="col m12">
+          <label for="longUrl">Paste your long url here!</label>
+          <input type="text" name="longUrl" id="longUrl" placeholder="https://www.some-very-long-url-wow-that-is-long.com/and/some/sub/folders" required/>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" name="submitLongUrl" class="_box">Shorten!</button>
+        </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
