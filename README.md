@@ -17,7 +17,7 @@ Furthermore no extra precautions for security have been taken.
 
 
 ## UI
-The user interface is very basic since this was created with a time limit. I used the CSS framework [Beauter](beauter.outboxcraft.com/).
+The user interface is very basic since this was created with a time limit. I used the CSS framework [Beauter](https://beauter.io/).
 
 ## Database
 This implementation uses a sqlite3 database, if you want to create the table yourself, here is the SQL statement:
