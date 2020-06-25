@@ -4,7 +4,7 @@ This little project was a challenge to be completed in under one hour. Hence the
 
 ## Service
 For every long URL (and the `time.time()` value) a SHA-256 hash is generated.
-A random part of the hash is then used to represent the long URL.
+Then the first 6 chars are used.
 
 Let's look at an example, we have a long url: `https://github.com/MisterXY89`. The app gives us
 `short.io/b61982` (Notice that `short.io` is an example `BASE_URL`). The app then looks up the
