@@ -16,16 +16,11 @@ os.environ["TZ"] = "Europe/Berlin"
 time.tzset()
 
 # HOSTNAME, here let's say it is short.io / localhost:500 for dev
-BASE_URL = "short.io"
+# BASE_URL = "short.io"
+BASE_URL = "localhost:5000"
 
 # URL_DB FILENAME
 DB_FILE = "urls.db"
-
-
-def randomInterval():
-    start = random.randint(0, 150)
-    end = start + 7
-    return {"start": start, "end": end}
 
 
 def create_connection():
@@ -86,8 +81,7 @@ def result():
 def shorten():
     url = request.form["longUrl"]
     urlHash = sha256((url+str(time.time())).encode('utf-8')).hexdigest()
-    interval = randomInterval()
-    shortUrlHash = urlHash[interval["start"]:interval["end"]]
+    shortUrlHash = urlHash[:6]
 
     # TODO: escape url!!
     shortUrl = BASE_URL + "/" + shortUrlHash
